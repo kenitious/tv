@@ -1,0 +1,346 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Mwangaza Tv station Official website</title>
+
+    <link rel="stylesheet" href="{% static 'news/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/owl.min.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/jquery-ui.min.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/main.css' %}">
+    <style>
+    .circular--square {
+  border-radius: 50%;
+}
+</style>
+
+    <link rel="shortcut icon" href="{% static 'news/images/logo/logotv.png' %}" class="circular--square" type="image/x-icon">
+
+
+
+
+
+     <style>
+
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 14px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.instagram {
+  background: #dd4b89;
+  color: white;
+}
+
+
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+.whatsapp {
+  background: green;
+  color: green;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+    <!--============= ScrollToTop Section Starts Here =============-->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+    <div class="overlay"></div>
+    <!--============= ScrollToTop Section Ends Here =============-->
+
+
+    <!--============= Header Section Starts Here =============-->
+    <header class="header-section">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="{% url 'index' %}">
+                        <img src="{% static 'news/images/logo/logotv.png' %}" alt="logo" width="30" height="70">
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="{% url 'index' %}">Home</a>
+
+                    </li>
+
+                    <li>
+                        <a href="{% url 'index' %}">News</a>
+
+                    </li>
+
+
+                    <li>
+                        <a href="#0">Shows</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="">show 1</a>
+                            </li>
+                            <li>
+                                <a href="">show 2</a>
+                            </li>
+                            <li>
+                                <a href="">show 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{% url 'sports' %}">Sports</a>
+                    </li>
+
+                    <li>
+                        <a href="">Business</a>
+                    </li>
+                    <li>
+                        <a href="#0">Pages</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="about.html">about</a>
+                            </li>
+                            <li>
+                                <a href="app-download.html">app download</a>
+                            </li>
+                            <li>
+                                <a href="#0">Team</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="team.html">Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="team-single.html">Team Single</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#0">Account</a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="sign-up.html">Sign Up</a>
+                                    </li>
+                                    <li>
+                                        <a href="sign-in.html">Sign In</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="{% url 'faqs' %}">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="partners.html">Partners</a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="coming-soon.html">Coming Soon</a>
+                            </li>
+                            <li>
+                                <a href="change-password.html">Change Password</a>
+                            </li>
+                            <li>
+                                <a href="reset-password.html">Password Reset</a>
+                            </li>
+                            <li>
+                                <a href="reviews.html">review</a>
+                            </li>
+                            <li>
+                                <a href="404.html">404</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#0">Programs</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="{% url 'programs' %}">Monday</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'programs' %}">Tuesday</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'programs' %}">Wenesday</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'programs' %}">Thursday</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'programs' %}">Friday</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'programs' %}">Saturday</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'programs' %}">Sunday</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Talk to us</a>
+                    </li>
+
+
+                </ul>
+                <div class="header-bar d-lg-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!--============= Header Section Ends Here =============-->
+    <div class="icon-bar">
+  <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+  <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+  <a href="tel:+254715073720" class="linkedin"><i class="fa fa-phone"></i></a>
+    <a href="#" class="whatsapp"><i class="fab fa-google-plus-g"></i></a>
+
+</div>
+
+
+  {% block content %}
+
+
+
+
+
+  {% endblock %}
+
+<br>
+    <!--============= Footer Section Starts Here =============-->
+    <footer class="footer-section bg_img bg-transparent" data-background="{% static 'news/images/footer/footer-bg.jpg' %}">
+        <div class="container">
+            <div class="footer-top padding-top padding-bottom">
+                <div class="logo">
+                    <a href="#0">
+                        <img src="{% static 'news/images/logo/logotv.png' %}" alt="logo">
+                    </a>
+
+                </div>
+
+
+                <ul class="social-icons">
+                    <li>
+                        <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-pinterest-p"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    <li>
+                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <ul class="footer-link">
+                    <li>
+                        <a href="#0">About</a>
+                    </li>
+                    <li>
+                        <a href="#0">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="#0">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#0">Terms of Service</a>
+                    </li>
+                    <li>
+                        <a href="#0">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>
+                    Copyright ©<script>document.write(new Date().getFullYear());</script>All rights reserved | Mwangaza TV
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--============= Footer Section Ends Here =============-->
+
+    <script src="{% static 'news/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'news/js/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'news/js/plugins.js' %}"></script>
+    <script src="{% static 'news/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'news/js/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'news/js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'news/js/wow.min.js' %}"></script>
+    <script src="{% static 'news/js/waypoints.js' %}"></script>
+    <script src="{% static 'news/js/nice-select.js' %}"></script>
+    <script src="{% static 'news/js/owl.min.js' %}"></script>
+    <script src="{% static 'news/js/counterup.min.js' %}"></script>
+    <script src="{% static 'news/js/paroller.js' %}"></script>
+    <script src="{% static 'news/js/main.js' %}"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

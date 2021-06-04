@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <style>
+
+    #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #0a3d62;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+
+
+
+
+     <!--============= Header Section Ends Here =============-->
+    <section class="page-header single-header bg_img oh" data-background="{% static 'news/images/page-header.png' %}">
+        <div class="bottom-shape d-none d-md-block">
+            <img src="{% static 'news/css/img/page-header2.png' %}" alt="css">
+        </div>
+    </section>
+    <!--============= Header Section Ends Here =============-->
+
+
+    <!--============= Pricing Section Starts Here =============-->
+    <section class="pricing-section oh padding-bottom-2 single-pricing">
+        <div class="container">
+            <div class="section-header cl-white mw-100 mb-4">
+                <h2 class="title mt-0">Mwangaza TV Daily Program Timeline</h2>
+                <p>
+                    We offer variety of programs that can be viewed by all audiences <i class="fas fa-tv"></i>
+                </p>
+            </div>
+            <div class="tab-up">
+                <ul class="tab-menu pricing-menu">
+
+                </ul>
+                <div class="tab-area">
+                    <div class="tab-item active">
+                        <div class="pricing-slider-wrapper">
+                            <div class="pricing-slider owl-theme owl-carousel">
+                                <div class="pricing-item-2">
+                                    <h5 class="cate">Daily News</h5>
+                                    <div class="thumb">
+                                        <img src="{% static 'news/images/pricing/pricing1.png' %}" alt="pricing">
+                                    </div>
+                                    <h2 class="title"><sup> Five times </sup></h2>
+                                    <span class="info">Per Day</span>
+                                    <ul class="pricing-content-3">
+                                        <li>Mwangaza Daily Briefing</li>
+                                        <li>Monthly Updates</li>
+                                        <li>eCommerce Integration</li>
+                                        <li>Interface Customization</li>
+                                        <li>24/7 Support</li>
+                                    </ul>
+                                    <a href="#0" class="get-button">Program Here<i class="flaticon-right"></i></a>
+                                </div>
+                                <div class="pricing-item-2">
+                                    <h5 class="cate">Business News</h5>
+                                    <div class="thumb">
+                                        <img src="{% static 'news/images/pricing/pricing2.png' %}" alt="pricing">
+                                    </div>
+                                    <h2 class="title"><sup>Five times </sup></h2>
+                                    <span class="info">Per Day</span>
+                                    <ul class="pricing-content-3">
+                                        <li>5 Users 20 GB Storage </li>
+                                        <li>Weekly Updates</li>
+                                        <li>eCommerce Integration</li>
+                                        <li>Interface Customization</li>
+                                        <li>24/7 Support</li>
+                                    </ul>
+                                    <a href="#0" class="get-button">Program Here<i class="flaticon-right"></i></a>
+                                </div>
+                                <div class="pricing-item-2">
+                                    <h5 class="cate">Sports</h5>
+                                    <div class="thumb">
+                                        <img src="{% static 'news/images/pricing/pricing3.png' %}" alt="pricing">
+                                    </div>
+                                    <h2 class="title"><sup>Five times </sup></h2>
+                                    <span class="info">Per Day</span>
+                                    <ul class="pricing-content-3">
+                                        <li>10 Users 40 GB Storage </li>
+                                        <li>Daily Updates</li>
+                                        <li>eCommerce Integration</li>
+                                        <li>Interface Customization</li>
+                                        <li>24/7 Support</li>
+                                    </ul>
+                                    <a href="#0" class="get-button">Program Here<i class="flaticon-right"></i></a>
+                                </div>
+                                <div class="pricing-item-2">
+                                    <h5 class="cate">Shows</h5>
+                                    <div class="thumb">
+                                        <img src="{% static 'news/images/pricing/pricing4.png' %}" alt="pricing">
+                                    </div>
+                                    <h2 class="title"><sup>Two times</sup></h2>
+                                    <span class="info">Per Day</span>
+                                    <ul class="pricing-content-3">
+                                        <li>15 Users 60 GB Storage </li>
+                                        <li>Free Updates</li>
+                                        <li>eCommerce Integration</li>
+                                        <li>Interface Customization</li>
+                                        <li>24/7 Support</li>
+                                    </ul>
+                                    <a href="#0" class="get-button">Select Plan<i class="flaticon-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="text-center mt-70">
+                <a href="https://drive.google.com/file/d/0BymUxA0Ek0ttTDRZR0R6ZW5VWDg/view?usp=sharing" class="show-feature">Print programs Timeline</a>
+            </div>
+        </div>
+    </section>
+    <!--============= Pricing Section Ends Here =============-->
+
+
+    <!--============= program Section Starts Here =============-->
+    <section class="estimate-plan padding-top-2 padding-bottom">
+        <div class="container">
+            <div class="section-header mw-100">
+
+                <h2 class="title">Monday Program Timeline</h2>
+                <p>On Monday we offer variety of programs that can be viewed by all audiences</p>
+            </div>
+
+<table id="customers">
+  <tr>
+    <th>Program Name</th>
+    <th>Time</th>
+    <th>Anchor/ Host</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Christina Berglund</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Königlich Essen</td>
+    <td>Philip Cramer</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>Simon Crowther</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Paris spécialités</td>
+    <td>Marie Bertrand</td>
+    <td>France</td>
+  </tr>
+</table>
+
+        </div>
+    </section>
+    <!--============= Program Section Ends Here =============-->
+
+     <!--============= program Section Starts Here =============-->
+    <section class="estimate-plan padding-top-2 padding-bottom">
+        <div class="container">
+            <div class="section-header mw-100">
+
+                <h2 class="title">Tuesday Program Timeline</h2>
+                <p>On Tuesday we offer variety of programs that can be viewed by all audiences</p>
+            </div>
+
+<table id="customers">
+  <tr>
+    <th>Program Name</th>
+    <th>Time</th>
+    <th>Anchor/ Host</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Christina Berglund</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Königlich Essen</td>
+    <td>Philip Cramer</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>Simon Crowther</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Paris spécialités</td>
+    <td>Marie Bertrand</td>
+    <td>France</td>
+  </tr>
+</table>
+
+        </div>
+    </section>
+    <!--============= Program Section Ends Here =============-->
+
+
+
+
+
+
+{% endblock %}

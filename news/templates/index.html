@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+ <!--============= Banner Section Starts Here =============-->
+ <!--============= Banner Section Starts Here =============-->
+    <section class="banner-14 oh bg_img pos-rel" data-background="{% static 'news/images/banner/banner-bg-14.jpg' %}">
+        <div class="bottom-shape d-lg-block d-none">
+            <img src="{% static 'news/css/img/banner-shape-14.png' %}" alt="banner" >
+        </div>
+        <div class="container">
+            <div class="row align-items-center justify-content-between flex-wrap-reverse">
+                <div class="col-lg-6 rtl">
+                    <a href="https://www.youtube.com/watch?v=WD5Rye9huug" class="banner-video-14 popup">
+                        <img src="{% static 'news/images/banner/WhatsApp Image 2021-05-31 at 23.14.53.jpeg' %}" alt="banner" width="635" height="589">
+                        <div class="video-button"><i class="flaticon-play"></i></div>
+                    </a>
+                </div>
+                <div class="col-lg-5">
+                    <div class="banner-content-14 cl-white">
+                        <h5 class="cate">Welcome to Mwangaza TV</h5>
+                        <h1 class="title">Tumaini Lako</h1>
+
+                        <span>Broadcasting To All Nations</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sponsor-slider-wrapper cl-white text-center">
+                <span class="slider-heading">PARTNERSHIP AND COMPANIES</span>
+                <div class="sponsor-slider-3 owl-theme owl-carousel">
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor1.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor2.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor3.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor4.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor5.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor6.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor1.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor2.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor3.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor4.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor5.png' %}" alt="sponsor">
+                    </div>
+                    <div class="sponsor-thumb">
+                        <img src="{% static 'news/images/sponsor/sponsor6.png' %}" alt="sponsor">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Banner Section Ends Here =============-->
+
+
+
+    </section>
+    <!--============= Banner Section Ends Here =============-->
+     <!--============= Blog Section Starts Here =============-->
+<!--============= Blog Section Starts Here =============-->
+    <section class="blog-section padding-top padding-bottom">
+        <div class="container">
+
+                    <div class="section-header cl-white mw-100 mb-4">
+                <h2 class="title mt-0">Mwangaza TV Daily Daily News  and Update</h2>
+                <p>
+                    Wanna Know what is happening around the world?
+                </p>
+                        <p>
+                    Mwangaza Tv got you
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <article class="mb-40-none">
+
+
+
+                               <div class="faq-video">
+                            <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="video-area popup">
+                                <img src="{%static 'news/images/faq/video.png' %}" alt="faq">
+                                <div class="video-button-2">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <i class="flaticon-play"></i>
+                                </div>
+                            </a>
+                            <h5 class="title">Mwangaza Tv Is Broadcasting</h5>
+                        </div>
+
+</br>
+
+
+                    <div class="section-header cl-white mw-100 mb-4">
+                <h3 class="title mt-0">Corona Virus Daily Updates</h3>
+                               <div class="counter-wrapper-2">
+                    <div class="counter-item-2">
+                        <h2  class="title"><span class="intitle counter" >2345</span><span class="intitle"></span></h2>
+                        <span class="name">Confirmed Cases</span>
+                    </div>
+                    <div class="counter-item-2">
+                        <h2 class="title"><span class="intitle counter">9120</span><span class="intitle"></span></h2>
+                        <span class="name">Recoveries</span>
+                    </div>
+                    <div class="counter-item-2">
+                        <h2 class="title"><span class="intitle counter">1310</span><span class="intitle"></span></h2>
+                        <span class="name">Deaths</span>
+                    </div>
+                       <div class="counter-item-2">
+                        <h2 class="title"><span class="intitle counter">13</span><span class="intitle"></span>%</h2>
+                        <span class="name">Positivity Rates</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+                        {% for tnews in tnews %}
+                        <div class="post-item">
+                            <div class="post-thumb">
+                                <a href="{% url 'post_detail' tnews.slug  %}"><img src="{{ tnews.img.url }} " alt="blog" width="730" height="344"></a>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="title">
+                                    <a href="{% url 'post_detail' tnews.slug  %}">{{ tnews.title }} </a>
+                                </h3>
+                                <p>{{ tnews.content|slice:":200" }} </p>
+                                <a href="{% url 'post_detail' tnews.slug  %} " class="read">{{ tnews.author }} | {{ tnews.created_on}} </a>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+
+
+
+
+
+
+                        <div class="post-item">
+                            <div class="post-thumb">
+                                <a href="blog-single-1.html"><img src="{% static 'news/images/blog/blog4.jpg'%} " alt="blog"></a>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="title">
+                                    <a href="blog-single-1.html">The Most Comprehensive Mobile
+                                        App Prototyping Guide</a>
+                                </h3>
+                                <p>Hybrid mobile applications are like any other applications you will see
+                                    on your mobile.</p>
+                                <a href="blog-single-1.html" class="read">3 min Read</a>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="pagination-area text-center pt-50 pb-50 pb-lg-none">
+                        <a href="#0"><i class="fas fa-angle-double-left"></i><span>Prev</span></a>
+                        <a href="#0">1</a>
+                        <a href="#0">2</a>
+                        <a href="#0" class="active">3</a>
+                        <a href="#0">4</a>
+                        <a href="#0">5</a>
+                        <a href="#0"><span>Next</span><i class="fas fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+             {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+            </div>
+        </div>
+    </section>
+    <!--============= Blog Section Ends Here =============-->
+
+
+
+    <!--============= Blog Section Ends Here =============-->
+
+
+    <!--============= Sponsor Section Section Starts Here =============-->
+    <div class="sponsor-section padding-bottom padding-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="spon-cont">
+                        <p>Used by over 1,000,000 people worldwide</p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="sponsor-slider owl-theme owl-carousel">
+                        <div class="sponsor-thumb">
+                            <img src="{% static 'news/images/sponsor/sponsor1.png' %}" alt="sponsor">
+                        </div>
+                        <div class="sponsor-thumb">
+                            <img src="{% static 'news/images/sponsor/sponsor2.png' %}" alt="sponsor">
+                        </div>
+                        <div class="sponsor-thumb">
+                            <img src="{% static 'news/images/sponsor/sponsor3.png' %}" alt="sponsor">
+                        </div>
+                        <div class="sponsor-thumb">
+                            <img src="{% static 'news/images/sponsor/sponsor4.png' %}" alt="sponsor">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--============= Sponsor Section Section Ends Here =============-->
+
+
+    <!--============= Amazing Feature Section Starts Here =============-->
+    <section class="amazing-feature-section pos-rel" id="feature">
+        <div class="shape-container oh">
+            <div class="bg_img feature-background" data-background="{% static 'news/images/bg/amazing-feature-bg.jpg'%} "></div>
+            <div class="feature-top-shape d-none d-lg-block">
+                <img src="{% static 'news/css/img/feature-shape.png' %}" alt="css">
+            </div>
+        </div>
+        <div class="topper-feature oh padding-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-header left-style mb-lg-0 white-lg-black pos-rel">
+                            <h5 class="cate">Explore Amazing Features</h5>
+                            <h2 class="title">That will boost your productivity</h2>
+                            <p>With our wide range of features, you can create a custom app
+                            no matter what your niche: restaurant, Realtor, small business,
+                            rock band, and all the rest!</p>
+                            <div class="downarrow d-none d-lg-block">
+                                <img src="{% static 'news/images/feature/downarrow.png' %}" alt="feature">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-area popup">
+                            <div class="thumb">
+                                <img src="{% static 'news/images/feature/fature-video.png' %}" alt="feature">
+                            </div>
+                            <div class="button-area">
+                                <h4 class="title">
+                                    Watch Videos
+                                </h4>
+                                <div class="video-button">
+                                    <i class="flaticon-play"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="amazing-feature-bottom padding-top padding-bottom pb-lg-0 pt-lg-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-xl-7">
+                        <div class="section-header left-style cl-white">
+                            <h5 class="cate">A Collection of Prominent Features</h5>
+                            <h2 class="title">Delivering Exceptional User Experiences.</h2>
+                            <p>Numerous features make it possible to customize the system
+                                in accordance with all your needs.</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row justify-content-center mb-30-none">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="am-item">
+                                    <div class="am-thumb">
+                                        <img src="{% static 'news/images/feature/am-fea1.png' %}" alt="feature">
+                                    </div>
+                                    <div class="am-content">
+                                        <h5 class="title">Free Trial</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="am-item active">
+                                    <div class="am-thumb">
+                                        <img src="{% static 'news/images/feature/am-fea2.png' %}" alt="feature">
+                                    </div>
+                                    <div class="am-content">
+                                        <h5 class="title">Secure Data</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="am-item">
+                                    <div class="am-thumb">
+                                        <img src="{% static 'news/images/feature/am-fea3.png' %}" alt="feature">
+                                    </div>
+                                    <div class="am-content">
+                                        <h5 class="title">Quick Access</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="am-item">
+                                    <div class="am-thumb">
+                                        <img src="{% static 'news/images/feature/am-fea4.png' %}" alt="feature">
+                                    </div>
+                                    <div class="am-content">
+                                        <h5 class="title">24h Support</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Amazing Feature Section Ends Here =============-->
+
+{% endblock %}

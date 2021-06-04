@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+
+     <!--============= Header Section Ends Here =============-->
+    <section class="page-header single-header bg_img oh" data-background="{% static 'news/images/page-header.png' %}">
+        <div class="bottom-shape d-none d-md-block">
+            <img src="{% static 'news/css/img/page-header2.png' %}" alt="css">
+        </div>
+    </section>
+    <!--============= Header Section Ends Here =============-->
+
+
+    <!--============= Pricing Section Starts Here =============-->
+    <section class="pricing-section oh padding-bottom-2 single-pricing">
+        <div class="container">
+            <div class="section-header cl-white mw-100 mb-4">
+                <h2 class="title mt-0">Mwangaza TV Daily Sports News  and Update</h2>
+                <p>
+                    Wanna Know what is happening in the field of sports Mwangaza Tv got you <i class="fas fa-sports"></i>
+                </p>
+            </div>
+            <div class="tab-up">
+                <ul class="tab-menu pricing-menu">
+
+                </ul>
+                <div class="tab-area">
+                    <div class="tab-item active">
+                        <div class="pricing-slider-wrapper">
+                            <div class="pricing-slider owl-theme owl-carousel">
+                                <div class="pricing-item-2">
+                                    <h5 class="cate">FootBall</h5>
+                                    <div class="thumb">
+                                        <img src="{% static 'news/images/pricing/pricing1.png' %}" alt="pricing">
+                                    </div>
+                                    <h2 class="title"><sup>  </sup></h2>
+                                    <span class="info"></span>
+                                    <ul class="pricing-content-3">
+                                        <li>Premier league</li>
+                                        <li>Spain la liga</li>
+                                        <li>France League</li>
+                                        <li>Italy super cup</li>
+                                        <li>Transfer news</li>
+                                    </ul>
+                                    <a href="#0" class="get-button"> News<i class="flaticon-right"></i></a>
+                                </div>
+                                <div class="pricing-item-2">
+                                    <h5 class="cate">Local Sports</h5>
+                                    <div class="thumb">
+                                        <img src="{% static 'news/images/pricing/pricing2.png' %}" alt="pricing">
+                                    </div>
+                                    <h2 class="title"><sup> </sup></h2>
+                                    <span class="info"></span>
+                                    <ul class="pricing-content-3">
+                                        <li> Kenya Volleyball League</li>
+                                        <li>Weekly Updates</li>
+                                        <li>Kenya Tennis League</li>
+                                        <li>Safari Rally</li>
+                                        <li>24/7 news</li>
+                                    </ul>
+                                    <a href="#0" class="get-button">news<i class="flaticon-right"></i></a>
+                                </div>
+                                <div class="pricing-item-2">
+                                    <h5 class="cate">F1 Motor Sports</h5>
+                                    <div class="thumb">
+                                        <img src="{% static 'news/images/pricing/pricing3.png' %}" alt="pricing">
+                                    </div>
+                                    <h2 class="title"><sup> </sup></h2>
+                                    <span class="info"></span>
+                                    <ul class="pricing-content-3">
+                                        <li>10 Users 40 GB Storage </li>
+                                        <li>Daily Updates</li>
+                                        <li>eCommerce Integration</li>
+                                        <li>Interface Customization</li>
+                                        <li>24/7 Support</li>
+                                    </ul>
+                                    <a href="#0" class="get-button">News<i class="flaticon-right"></i></a>
+                                </div>
+                                <div class="pricing-item-2">
+                                    <h5 class="cate">GTA Shows</h5>
+                                    <div class="thumb">
+                                        <img src="{% static 'news/images/pricing/pricing4.png' %}" alt="pricing">
+                                    </div>
+                                    <h2 class="title"><sup></sup></h2>
+                                    <span class="info"></span>
+                                    <ul class="pricing-content-3">
+                                        <li>15 Users 60 GB Storage </li>
+                                        <li>Free Updates</li>
+                                        <li>eCommerce Integration</li>
+                                        <li>Interface Customization</li>
+                                        <li>24/7 Support</li>
+                                    </ul>
+                                    <a href="#0" class="get-button">News<i class="flaticon-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--============= Pricing Section Ends Here =============-->
+
+<!--============= Blog Section Starts Here =============-->
+    <section class="blog-section padding-top padding-bottom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <article class="mb-40-none">
+
+
+
+                        {% for highlights in highlights %}
+                        <div class="post-item">
+                            <div class="post-thumb">
+                                <a href="{% url 'post_detail' highlights.slug  %}"><img src="{{ highlights.img.url }} " alt="blog" width="730" height="344"></a>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="title">
+                                    <a href="{% url 'post_detail' highlights.slug  %}">{{ highlights.title }} </a>
+                                </h3>
+                                <p>{{ highlights.content|slice:":200" }} </p>
+                                <a href="{% url 'post_detail' highlights.slug  %} " class="read">{{ highlights.author }} | {{ highlights.created_on}} </a>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+ 
+
+
+
+
+
+                        <div class="post-item">
+                            <div class="post-thumb">
+                                <a href="blog-single-1.html"><img src="{% static 'news/images/blog/blog4.jpg'%} " alt="blog"></a>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="title">
+                                    <a href="blog-single-1.html">The Most Comprehensive Mobile
+                                        App Prototyping Guide</a>
+                                </h3>
+                                <p>Hybrid mobile applications are like any other applications you will see
+                                    on your mobile.</p>
+                                <a href="blog-single-1.html" class="read">3 min Read</a>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="pagination-area text-center pt-50 pb-50 pb-lg-none">
+                        <a href="#0"><i class="fas fa-angle-double-left"></i><span>Prev</span></a>
+                        <a href="#0">1</a>
+                        <a href="#0">2</a>
+                        <a href="#0" class="active">3</a>
+                        <a href="#0">4</a>
+                        <a href="#0">5</a>
+                        <a href="#0"><span>Next</span><i class="fas fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+             {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+            </div>
+        </div>
+    </section>
+    <!--============= Blog Section Ends Here =============-->
+
+
+
+
+    <!--============= Amazing Feature Section Starts Here =============-->
+    <section class="amazing-feature-section pos-rel" id="feature">
+        <div class="shape-container oh">
+            <div class="bg_img feature-background" data-background="{% static 'news/images/bg/amazing-feature-bg.jpg'%} "></div>
+            <div class="feature-top-shape d-none d-lg-block">
+                <img src="{% static 'news/css/img/feature-shape.png' %}" alt="css">
+            </div>
+        </div>
+        <div class="topper-feature oh padding-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-header left-style mb-lg-0 white-lg-black pos-rel">
+                            <h5 class="cate">Explore Amazing Sports World</h5>
+                            <h2 class="title">Mwangaza Tv Sports</h2>
+                            <p>At Mwangaza Tv we bring to you sports news all over the world and upcoming events</p>
+                            <div class="downarrow d-none d-lg-block">
+                                <img src="{% static 'news/images/feature/downarrow.png' %}" alt="feature">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href="https://www.youtube.com/watch?v=WD5Rye9huug" class="feature-video-area popup">
+                            <div class="thumb">
+                                <img src="{% static 'news/images/feature/fature-video.png' %}" alt="feature">
+                            </div>
+                            <div class="button-area">
+                                <h4 class="title">
+                                    Watch sports news here
+                                </h4>
+                                <div class="video-button">
+                                    <i class="flaticon-play"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--============= Amazing Feature Section Ends Here =============-->
+
+
+
+
+
+
+{% endblock %}

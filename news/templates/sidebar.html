@@ -1,0 +1,141 @@
+{% block sidebar %}
+                <div class="col-lg-4 col-md-8 col-sm-10">
+                    <aside class="sticky-menu">
+                        <div class="widget widget-search">
+                            <h5 class="title">search</h5>
+                            <form class="search-form">
+                                <input type="text" placeholder="Enter your Search Content" required>
+                                <button type="submit"><i class="flaticon-loupe"></i>Search</button>
+                            </form>
+                        </div>
+                        <div class="widget widget-post">
+                            <h5 class="title">latest post</h5>
+                            <div class="slider-nav">
+                                <span class="widget-prev"><i class="fas fa-angle-left"></i></span>
+                                <span class="widget-next active"><i class="fas fa-angle-right"></i></span>
+                            </div>
+                            <div class="widget-slider owl-carousel owl-theme">
+
+
+
+
+                        {% for highlights in highlights %}
+
+                                <div class="item">
+                                    <div class="thumb">
+                                        <a href="{% url 'post_detail' highlights.slug  %}">
+                                            <img src="{{ highlights.img.url }} " alt="blog" width="290" height="200">
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="p-title">
+                                            <a href="{% url 'post_detail' highlights.slug  %}">{{ highlights.title }} </a>
+                                        </h6>
+                                        <div class="meta-post">
+                                            <a href="#0" class="mr-4"><i class="flaticon-chat-1"></i>20 Comments</a>
+                                            <a href="#0"><i class="flaticon-eye"></i>466 View</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% endfor %}
+
+
+
+                            </div>
+                        </div>
+                        <div class="widget widget-follow">
+                            <h5 class="title">Follow Us</h5>
+                            <ul class="social-icons">
+                                <li>
+                                    <a href="https://www.facebook.com/Mwangazatv/" class="">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/mwangaza_tv?s=09" class="active">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://youtube.com/channel/UCTX5MKA5RgKPyYmGWEXX6cQ" class="">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <i class="fab fa-google"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/mwangazatvkenya?utm_medium=copy_link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget widget-categories">
+                            <h5 class="title">categories</h5>
+                            <ul>
+                                <li>
+                                    <a href="#0">
+                                        <span>Breaking News</span><span>50</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <span>Sports</span><span>43</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <span>Business</span><span>34</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <span>Inspiration</span><span>63</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <span> Programs  </span><span>11</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <span> Testimonials </span><span>30</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <span>Lifestyle </span><span>55</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget widget-tags">
+                            <h5 class="title">featured tags</h5>
+                            <ul>
+                                <li>
+                                    <a href="#0">IOS APPS</a>
+                                </li>
+                                <li>
+                                    <a href="#0">SOFTWARE</a>
+                                </li>
+                                <li>
+                                    <a href="#0">APPS
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">ANDROID</a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="active">UX DESIGN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+{% endblock sidebar %}
